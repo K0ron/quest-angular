@@ -1,0 +1,9 @@
+<div *appDisplayMovies="displayMoviesList">
+  <div *ngFor="let movie of movies" appHightlight>
+    <h2>{{ movie.name }}</h2>
+    <p>Réalisateur : {{ movie.director }}</p>
+    <img [src]="movie.imageLink" alt="{{ movie.name }}" width="200" />
+  </div>
+</div>
+<button (click)="showMovies()">Show Movies</button>
+<button (click)="hideMovies()">Hide Movies</button>
